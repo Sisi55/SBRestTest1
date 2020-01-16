@@ -1,5 +1,6 @@
 package com.example.restclient1;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -12,6 +13,8 @@ public class OrderDto {
 
     private String orderNo;
     private Long amount;
+
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss", timezone="Asia/Seoul")
     private LocalDateTime orderDateTime;
 
     @Builder
