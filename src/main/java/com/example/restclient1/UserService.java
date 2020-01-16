@@ -20,6 +20,7 @@ public class UserService {
     @Value("${order.api.url}")
     private String orderApiUrl;
 
+    // RestTemplate 이 Mocking 되지 않아서 존재하는 코드 ?
     public UserService(RestTemplateBuilder restTemplateBuilder){
         this.restTemplate = restTemplateBuilder.build();
     }
